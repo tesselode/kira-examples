@@ -1,0 +1,9 @@
+[workspace]
+members = [
+	"crates/metronome",
+	"crates/score-counter",
+	"crates/simple-sound-playback",
+]
+
+[profile.dev.package."*"]
+opt-level = 3
