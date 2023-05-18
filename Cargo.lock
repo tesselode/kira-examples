@@ -237,6 +237,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "ghost-noise"
+version = "0.1.0"
+dependencies = [
+ "kira",
+]
+
+[[package]]
 name = "glam"
 version = "0.24.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
