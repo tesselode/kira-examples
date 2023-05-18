@@ -1,5 +1,6 @@
 [workspace]
 members = [
+	"crates/dynamic-music",
 	"crates/metronome",
 	"crates/score-counter",
 	"crates/simple-sound-playback",
