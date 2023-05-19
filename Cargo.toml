@@ -4,6 +4,7 @@ members = [
 	"crates/ghost-noise",
 	"crates/metronome",
 	"crates/score-counter",
+	"crates/seamless-loop-with-intro",
 	"crates/simple-sound-playback",
 ]
 
