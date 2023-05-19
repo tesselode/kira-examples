@@ -6,6 +6,7 @@ members = [
 	"crates/score-counter",
 	"crates/seamless-loop-with-intro",
 	"crates/simple-sound-playback",
+	"crates/spatial-audio",
 ]
 
 [profile.dev.package."*"]
