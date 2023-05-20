@@ -1,5 +1,3 @@
-use std::f32::consts::FRAC_PI_2;
-
 use kira::{
 	manager::{backend::DefaultBackend, AudioManager, AudioManagerSettings},
 	sound::static_sound::{StaticSoundData, StaticSoundSettings},
