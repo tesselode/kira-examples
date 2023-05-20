@@ -7,5 +7,5 @@ edition = "2021"
 
 [dependencies]
 glam = { version = "0.21.0", features = ["mint"] }
-kira = { git = "https://github.com/tesselode/kira", rev = "dce29d7" }
+kira = { path = "../../../kira/crates/kira" }
 macroquad = { version = "0.3.25", default-features = false }

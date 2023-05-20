@@ -82,7 +82,7 @@ async fn main() {
 
 		draw_grid(20, 1., BLACK, GRAY);
 
-		draw_cube_wires(vec3(0., 1., -6.), vec3(2., 2., 2.), GREEN);
+		draw_cube_wires(EMITTER_POSITION, vec3(2., 2., 2.), GREEN);
 
 		// Back to screen space, render some text
 
@@ -102,7 +102,7 @@ impl CameraController {
 	fn new() -> Self {
 		Self {
 			position: vec3(0.0, 1.0, 0.0),
-			yaw: 1.18,
+			yaw: 0.0,
 			pitch: 0.0,
 		}
 	}
@@ -120,13 +120,13 @@ impl CameraController {
 		if is_key_down(KeyCode::Right) || is_key_down(KeyCode::D) {
 			self.position += self.right() * delta_time * MOVE_SPEED;
 		}
-		self.yaw += mouse_delta.x * LOOK_SPEED;
-		self.pitch += mouse_delta.y * -LOOK_SPEED;
+		self.yaw -= mouse_delta.x * LOOK_SPEED;
+		self.pitch -= mouse_delta.y * LOOK_SPEED;
 		self.pitch = self.pitch.clamp(-1.5, 1.5);
 	}
 
 	fn orientation(&self) -> Quat {
-		Quat::from_euler(EulerRot::YXZ, self.yaw - FRAC_PI_2, self.pitch, 0.0)
+		Quat::from_euler(EulerRot::XYZ, self.pitch, self.yaw, 0.0)
 	}
 
 	fn camera(&self) -> Camera3D {
@@ -139,12 +139,8 @@ impl CameraController {
 	}
 
 	fn front(&self) -> Vec3 {
-		vec3(
-			self.yaw.cos() * self.pitch.cos(),
-			self.pitch.sin(),
-			self.yaw.sin() * self.pitch.cos(),
-		)
-		.normalize()
+		(Quat::from_euler(EulerRot::XYZ, self.pitch, self.yaw, 0.0) * Vec3::new(0.0, 0.0, -1.0))
+			.normalize()
 	}
 
 	fn right(&self) -> Vec3 {
