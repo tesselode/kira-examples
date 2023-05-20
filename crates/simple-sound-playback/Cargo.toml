@@ -7,4 +7,3 @@ edition = "2021"
 
 [dependencies]
 kira = { git = "https://github.com/tesselode/kira", rev = "dce29d7" }
-rand = "0.8.5"
