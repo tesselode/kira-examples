@@ -7,5 +7,5 @@ edition = "2021"
 
 [dependencies]
 glam = { version = "0.21.0", features = ["mint"] }
-kira = { path = "../../../kira/crates/kira" }
+kira = "0.8.0"
 macroquad = { version = "0.3.25", default-features = false }

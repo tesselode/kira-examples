@@ -251,7 +251,7 @@ checksum = "0c87e182de0887fd5361989c677c4e8f5000cd9491d6d563161a8f3a5519fc7f"
 name = "dynamic-music"
 version = "0.1.0"
 dependencies = [
- "kira 0.7.3 (git+https://github.com/tesselode/kira?rev=dce29d7)",
+ "kira",
 ]
 
 [[package]]
@@ -296,7 +296,7 @@ dependencies = [
 name = "ghost-noise"
 version = "0.1.0"
 dependencies = [
- "kira 0.7.3 (git+https://github.com/tesselode/kira?rev=dce29d7)",
+ "kira",
 ]
 
 [[package]]
@@ -416,20 +416,9 @@ dependencies = [
 
 [[package]]
 name = "kira"
-version = "0.7.3"
-dependencies = [
- "atomic-arena",
- "cpal",
- "glam 0.24.0",
- "mint",
- "ringbuf",
- "symphonia",
-]
-
-[[package]]
-name = "kira"
-version = "0.7.3"
-source = "git+https://github.com/tesselode/kira?rev=dce29d7#dce29d73b88994a3ebf0252a949f57cf1a9c019b"
+version = "0.8.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "8e0742cc19ce7fe8dc72985cf0403156c09e5cbfe364d23f2f064fe93795afb9"
 dependencies = [
  "atomic-arena",
  "cpal",
@@ -535,7 +524,7 @@ checksum = "2dffe52ecf27772e601905b7522cb4ef790d2cc203488bbd0e2fe85fcb74566d"
 name = "metronome"
 version = "0.1.0"
 dependencies = [
- "kira 0.7.3 (git+https://github.com/tesselode/kira?rev=dce29d7)",
+ "kira",
 ]
 
 [[package]]
@@ -874,14 +863,14 @@ checksum = "d29ab0c6d3fc0ee92fe66e2d99f700eab17a8d57d1c1d3b748380fb20baa78cd"
 name = "score-counter"
 version = "0.1.0"
 dependencies = [
- "kira 0.7.3 (git+https://github.com/tesselode/kira?rev=dce29d7)",
+ "kira",
 ]
 
 [[package]]
 name = "seamless-loop-with-intro"
 version = "0.1.0"
 dependencies = [
- "kira 0.7.3 (git+https://github.com/tesselode/kira?rev=dce29d7)",
+ "kira",
 ]
 
 [[package]]
@@ -900,7 +889,7 @@ checksum = "238abfbb77c1915110ad968465608b68e869e0772622c9656714e73e5a1a522f"
 name = "simple-sound-playback"
 version = "0.1.0"
 dependencies = [
- "kira 0.7.3 (git+https://github.com/tesselode/kira?rev=dce29d7)",
+ "kira",
 ]
 
 [[package]]
@@ -914,7 +903,7 @@ name = "spatial-audio"
 version = "0.1.0"
 dependencies = [
  "glam 0.21.3",
- "kira 0.7.3",
+ "kira",
  "macroquad",
 ]
 

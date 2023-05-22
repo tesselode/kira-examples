@@ -3,9 +3,11 @@ use std::{error::Error, io::stdin};
 use kira::{
 	manager::{backend::DefaultBackend, AudioManager, AudioManagerSettings},
 	modulator::lfo::LfoBuilder,
-	sound::static_sound::{StaticSoundData, StaticSoundSettings},
+	sound::{
+		static_sound::{StaticSoundData, StaticSoundSettings},
+		PlaybackRate,
+	},
 	tween::{ModulatorMapping, Value},
-	PlaybackRate,
 };
 
 fn main() -> Result<(), Box<dyn Error>> {
